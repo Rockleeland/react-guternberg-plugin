@@ -8,14 +8,14 @@ import './editor.scss';
 import styled from 'styled-components';
 
 const Container = styled.div`
-	border: 1px solid $gray;
+	border: 1px solid #cccccc;
   padding: 1rem;
 
   .button-container {
     text-align: center;
     padding: 22% 0;
     background: $off-white;
-    border: 1px solid $gray;
+    border: 1px solid #cccccc;
     border-radius: 2px;
     margin: 0 0 1.2rem 0;
   }
