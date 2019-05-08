@@ -14,6 +14,7 @@ const Container = styled.div`
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
+	text-align: center;
 
   .button-container {
     text-align: center;
@@ -26,7 +27,8 @@ const Container = styled.div`
 
   .heading {
     font-size: 1.5rem;
-    font-weight: 600;
+		font-weight: 600;
+		text-align: center;
   }
 
   .image {
