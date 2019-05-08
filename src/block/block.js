@@ -13,6 +13,7 @@ const Container = styled.div`
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	flex-direction: column;
 
   .button-container {
     text-align: center;
@@ -35,7 +36,7 @@ const Container = styled.div`
   }
 `;
 
-registerBlockType('card-block/main', {   
+registerBlockType( 'card-block/main', {
   title: 'Card',
   icon: 'heart',
   category: 'common',
