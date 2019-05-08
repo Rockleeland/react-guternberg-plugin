@@ -38,54 +38,54 @@ const Container = styled.div`
   }
 `;
 
-const Card = styled.div`
-	border: 1px solid #cccccc;
-	padding: 1rem;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
-	text-align: center;
+// const Card = styled.div`
+// 	border: 1px solid #cccccc;
+// 	padding: 1rem;
+// 	display: flex;
+// 	justify-content: center;
+// 	align-items: center;
+// 	flex-direction: column;
+// 	text-align: center;
 
-	.entry .entry-content > * {
-		border: 1px solid #cccccc;
-		padding: 1rem;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		flex-direction: column;
-		text-align: center;
-	}
+// 	.entry .entry-content > * {
+// 		border: 1px solid #cccccc;
+// 		padding: 1rem;
+// 		display: flex;
+// 		justify-content: center;
+// 		align-items: center;
+// 		flex-direction: column;
+// 		text-align: center;
+// 	}
 
-  .button-container {
-    text-align: center;
-    padding: 22% 0;
-    border: 1px solid #cccccc;
-    border-radius: 2px;
-    margin: 0 0 1.2rem 0;
-  }
+//   .button-container {
+//     text-align: center;
+//     padding: 22% 0;
+//     border: 1px solid #cccccc;
+//     border-radius: 2px;
+//     margin: 0 0 1.2rem 0;
+//   }
 
-  .card__title {
-    font-size: 1.5rem;
-		font-weight: 600;
-		text-align: center;
-  }
+//   .card__title {
+//     font-size: 1.5rem;
+// 		font-weight: 600;
+// 		text-align: center;
+//   }
 
-  .card__body {
-    height: 15.7rem;
-    width: 100%;
-    object-fit: cover;
-  }
-`;
-const style = {
-	border: '1px solid #cccccc',
-	padding: '1rem',
-	display: 'flex',
-	justifyContent: 'center',
-	alignItems: 'center',
-	flexDirection: 'column',
-	textAlign: 'center',
-};
+//   .card__body {
+//     height: 15.7rem;
+//     width: 100%;
+//     object-fit: cover;
+//   }
+// `;
+// const style = {
+// 	border: '1px solid #cccccc',
+// 	padding: '1rem',
+// 	display: 'flex',
+// 	justifyContent: 'center',
+// 	alignItems: 'center',
+// 	flexDirection: 'column',
+// 	textAlign: 'center',
+// };
 
 registerBlockType( 'card-block/main', {
   title: 'Card',
