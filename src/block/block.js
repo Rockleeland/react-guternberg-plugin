@@ -38,10 +38,6 @@ const Container = styled.div`
   }
 `;
 
-const Image = styled.img`
-	width: 100%;
-`;
-
 const style = {
 	card: {
 		border: '1px solid #cccccc',
@@ -54,9 +50,6 @@ const style = {
 	},
 	text: {
 		color: '#cccccc',
-	},
-	image: {
-		width: '100%',
 	},
 };
 
@@ -147,7 +140,6 @@ registerBlockType( 'card-block/main', {
             className="card__image" 
             src={ src }
 						alt={ alt }
-						style={ style.image }
           /> 
         );
       }
@@ -159,7 +151,6 @@ registerBlockType( 'card-block/main', {
           src={ src }
           alt=""
 					aria-hidden="true"
-					style={ style.image }
         /> 
       );
     };
