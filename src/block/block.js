@@ -38,53 +38,23 @@ const Container = styled.div`
   }
 `;
 
-// const Card = styled.div`
-// 	border: 1px solid #cccccc;
-// 	padding: 1rem;
-// 	display: flex;
-// 	justify-content: center;
-// 	align-items: center;
-// 	flex-direction: column;
-// 	text-align: center;
+const Image = styled.img`
+	width: 100%;
+`;
 
-// 	.entry .entry-content > * {
-// 		border: 1px solid #cccccc;
-// 		padding: 1rem;
-// 		display: flex;
-// 		justify-content: center;
-// 		align-items: center;
-// 		flex-direction: column;
-// 		text-align: center;
-// 	}
-
-//   .button-container {
-//     text-align: center;
-//     padding: 22% 0;
-//     border: 1px solid #cccccc;
-//     border-radius: 2px;
-//     margin: 0 0 1.2rem 0;
-//   }
-
-//   .card__title {
-//     font-size: 1.5rem;
-// 		font-weight: 600;
-// 		text-align: center;
-//   }
-
-//   .card__body {
-//     height: 15.7rem;
-//     width: 100%;
-//     object-fit: cover;
-//   }
-// `;
 const style = {
-	border: '1px solid #cccccc',
-	padding: '1rem',
-	display: 'flex',
-	justifyContent: 'center',
-	alignItems: 'center',
-	flexDirection: 'column',
-	textAlign: 'center',
+	card: {
+		border: '1px solid #cccccc',
+		padding: '1rem',
+		display: 'flex',
+		justifyContent: 'center',
+		alignItems: 'center',
+		flexDirection: 'column',
+		textAlign: 'center',
+	},
+	text: {
+		color: '#cccccc',
+	},
 };
 
 registerBlockType( 'card-block/main', {
@@ -170,7 +140,7 @@ registerBlockType( 'card-block/main', {
 
       if(alt) {
         return (
-          <img 
+          <Image 
             className="card__image" 
             src={ src }
             alt={ alt }
@@ -180,7 +150,7 @@ registerBlockType( 'card-block/main', {
       
       // No alt set, so let's hide it from screen readers
       return (
-        <img 
+        <Image 
           className="card__image"
           src={ src }
           alt=""
@@ -192,12 +162,18 @@ registerBlockType( 'card-block/main', {
     return (
 			<div
 				className="card"
-				style={ style }
+				style={ style.card }
 			>
         { cardImage(attributes.imageUrl, attributes.imageAlt) }
         <div className="card__content">
-          <h3 className="card__title">{ attributes.title }</h3>
-          <div className="card__body">
+					<h3 
+						className="card__title"
+						style={ style.text }
+					>{ attributes.title }</h3>
+					<div 
+						className="card__body"
+						style={ style.text }
+						>
             { attributes.body }
           </div>
         </div>
