@@ -9,7 +9,10 @@ import styled from 'styled-components';
 
 const Container = styled.div`
 	border: 1px solid #cccccc;
-  padding: 1rem;
+	padding: 1rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 
   .button-container {
     text-align: center;
@@ -126,7 +129,7 @@ registerBlockType('card-block/main', {
       // No alt set, so let's hide it from screen readers
       return (
         <img 
-          className="card__image" 
+          className="card__image"
           src={ src }
           alt=""
           aria-hidden="true"
