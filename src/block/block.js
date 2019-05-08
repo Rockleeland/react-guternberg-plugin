@@ -55,6 +55,9 @@ const style = {
 	text: {
 		color: '#cccccc',
 	},
+	image: {
+		width: '100%',
+	},
 };
 
 registerBlockType( 'card-block/main', {
@@ -140,21 +143,23 @@ registerBlockType( 'card-block/main', {
 
       if(alt) {
         return (
-          <Image 
+          <img 
             className="card__image" 
             src={ src }
-            alt={ alt }
+						alt={ alt }
+						style={ style.image }
           /> 
         );
       }
       
       // No alt set, so let's hide it from screen readers
       return (
-        <Image 
+        <img 
           className="card__image"
           src={ src }
           alt=""
-          aria-hidden="true"
+					aria-hidden="true"
+					style={ style.image }
         /> 
       );
     };
