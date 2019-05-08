@@ -77,6 +77,15 @@ const Card = styled.div`
     object-fit: cover;
   }
 `;
+const style = {
+	border: '1px solid #cccccc',
+	padding: '1rem',
+	display: 'flex',
+	justifyContent: 'center',
+	alignItems: 'center',
+	flexDirection: 'column',
+	textAlign: 'center',
+};
 
 registerBlockType( 'card-block/main', {
   title: 'Card',
@@ -181,7 +190,10 @@ registerBlockType( 'card-block/main', {
     };
     
     return (
-      <Card>
+			<div
+				className="card"
+				style={ style }
+			>
         { cardImage(attributes.imageUrl, attributes.imageAlt) }
         <div className="card__content">
           <h3 className="card__title">{ attributes.title }</h3>
@@ -189,7 +201,7 @@ registerBlockType( 'card-block/main', {
             { attributes.body }
           </div>
         </div>
-      </Card>
+      </div>
     );
   }
 });
