@@ -5,32 +5,18 @@ const { Button } = wp.components;
 // Import our CSS files
 import './style.scss';
 import './editor.scss';
-import styled from 'styled-components';
+// import styled from 'styled-components';
 
-const Card = styled.div`
-	border: 1px solid $gray;
-	padding: 1rem;
+// const Card = styled.div`
+// 	border: 1px solid $gray;
+// 	padding: 1rem;
 
-	.image {
-    height: 15.7rem;
-    width: 100%;
-    object-fit: cover;
-	}
-	
-	.heading {
-		font-size: 1.5rem;
-    font-weight: 600;
-	}
-`;
-
-const ButtonContainer = styled.div`
-	  text-align: center;
-    padding: 22% 0;
-    background: $off-white;
-    border: 1px solid $gray;
-    border-radius: 2px;
-    margin: 0 0 1.2rem 0;
-`;
+// 	.image {
+//     height: 15.7rem;
+//     width: 100%;
+//     object-fit: cover;
+//   }
+// `;
 
 registerBlockType( 'card-block/main', {
 	title: 'Card',
@@ -68,19 +54,19 @@ registerBlockType( 'card-block/main', {
 				);
 			}
 			return (
-				<ButtonContainer>
+				<div className="button-container">
 					<Button
 						onClick={ openEvent }
 						className="button button-large"
 					>
 						Pick an image
 					</Button>
-				</ButtonContainer>
+				</div>
 			);
 		};
 
 		return (
-			<Card>
+			<div>
 				<MediaUpload
 					onSelect={ media => {
 						setAttributes( { imageAlt: media.alt, imageUrl: media.url } );
@@ -103,7 +89,7 @@ registerBlockType( 'card-block/main', {
 					formattingControls={ [ 'bold', 'italic', 'underline' ] }
 					isSelected={ attributes.isSelected }
 				/>
-			</Card>
+			</div>
 		);
 	},
 	save( { attributes } ) {
