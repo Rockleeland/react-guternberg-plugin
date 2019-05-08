@@ -191,7 +191,7 @@ registerBlockType( 'card-block/main', {
     
     return (
 			<div
-				className="card"
+				className="wp-block-card-block-main card"
 				style={ style }
 			>
         { cardImage(attributes.imageUrl, attributes.imageAlt) }
