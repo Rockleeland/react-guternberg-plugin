@@ -8,6 +8,7 @@
     "eject": "cgb-scripts eject"
   },
   "dependencies": {
-    "cgb-scripts": "1.17.0"
+    "cgb-scripts": "1.17.0",
+    "styled-components": "^4.2.0"
   }
 }

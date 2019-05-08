@@ -5,6 +5,32 @@ const { Button } = wp.components;
 // Import our CSS files
 import './style.scss';
 import './editor.scss';
+import styled from 'styled-components';
+
+const Card = styled.div`
+	border: 1px solid $gray;
+	padding: 1rem;
+
+	.image {
+    height: 15.7rem;
+    width: 100%;
+    object-fit: cover;
+	}
+	
+	.heading {
+		font-size: 1.5rem;
+    font-weight: 600;
+	}
+`;
+
+const ButtonContainer = styled.div`
+	  text-align: center;
+    padding: 22% 0;
+    background: $off-white;
+    border: 1px solid $gray;
+    border-radius: 2px;
+    margin: 0 0 1.2rem 0;
+`;
 
 registerBlockType( 'card-block/main', {
 	title: 'Card',
@@ -42,19 +68,19 @@ registerBlockType( 'card-block/main', {
 				);
 			}
 			return (
-				<div className="button-container">
+				<ButtonContainer>
 					<Button
 						onClick={ openEvent }
 						className="button button-large"
 					>
 						Pick an image
 					</Button>
-				</div>
+				</ButtonContainer>
 			);
 		};
 
 		return (
-			<div className="container">
+			<Card>
 				<MediaUpload
 					onSelect={ media => {
 						setAttributes( { imageAlt: media.alt, imageUrl: media.url } );
@@ -77,7 +103,7 @@ registerBlockType( 'card-block/main', {
 					formattingControls={ [ 'bold', 'italic', 'underline' ] }
 					isSelected={ attributes.isSelected }
 				/>
-			</div>
+			</Card>
 		);
 	},
 	save( { attributes } ) {
@@ -105,7 +131,7 @@ registerBlockType( 'card-block/main', {
 			);
 		};
 		return (
-			<div className="card">
+			<div className="container">
 				{ cardImage( attributes.imageUrl, attributes.imageAlt ) }
 				<div className="card__content">
 					<h3 className="card__title">{ attributes.title }</h3>
