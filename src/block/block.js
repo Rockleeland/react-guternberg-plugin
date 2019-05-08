@@ -47,6 +47,16 @@ const Card = styled.div`
 	flex-direction: column;
 	text-align: center;
 
+	.entry .entry-content > * {
+		border: 1px solid #cccccc;
+		padding: 1rem;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		text-align: center;
+	}
+
   .button-container {
     text-align: center;
     padding: 22% 0;
