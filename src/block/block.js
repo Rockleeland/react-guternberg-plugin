@@ -8,7 +8,7 @@ import './editor.scss';
 
 registerBlockType( 'card-block/main', {
 	title: 'Card',
-	icon: 'heart',
+	icon: 'shield',
 	category: 'common',
 	attributes: {
 		title: {
@@ -29,18 +29,18 @@ registerBlockType( 'card-block/main', {
 			selector: '.card__image',
 		},
 	},
-	edit( { attributes, setAttributes } ) {
+	edit( { attributes, className, setAttributes } ) {
 		const getImageButton = ( openEvent ) => {
-			// if ( attributes.imageUrl ) {
-			// 	return (
-			// 		<img
-			// 			alt=""
-			// 			src={ attributes.imageUrl }
-			// 			onClick={ openEvent }
-			// 			className="image"
-			//     />
-			// 	);
-			// }
+			if ( attributes.imageUrl ) {
+				return (
+					<img
+						alt=""
+						src={ attributes.imageUrl }
+						onClick={ openEvent }
+						className="image"
+	    />
+				);
+			}
 			return (
 				<div className="button-container">
 					<Button
