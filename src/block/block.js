@@ -171,7 +171,7 @@ registerBlockType( 'card-block/main', {
       if(alt) {
         return (
           <img 
-            className="card__imageTEST" 
+            className="card__image" 
             src={ src }
             alt={ alt }
           /> 
@@ -181,7 +181,7 @@ registerBlockType( 'card-block/main', {
       // No alt set, so let's hide it from screen readers
       return (
         <img 
-          className="card__imagetest2"
+          className="card__image"
           src={ src }
           alt=""
           aria-hidden="true"
