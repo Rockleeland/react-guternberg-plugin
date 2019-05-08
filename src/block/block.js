@@ -29,18 +29,18 @@ registerBlockType( 'card-block/main', {
 			selector: '.card__image',
 		},
 	},
-	edit( { attributes, className, setAttributes } ) {
+	edit( { attributes, setAttributes } ) {
 		const getImageButton = ( openEvent ) => {
-			if ( attributes.imageUrl ) {
-				return (
-					<img
-						alt=""
-						src={ attributes.imageUrl }
-						onClick={ openEvent }
-						className="image"
-          />
-				);
-			}
+			// if ( attributes.imageUrl ) {
+			// 	return (
+			// 		<img
+			// 			alt=""
+			// 			src={ attributes.imageUrl }
+			// 			onClick={ openEvent }
+			// 			className="image"
+			//     />
+			// 	);
+			// }
 			return (
 				<div className="button-container">
 					<Button
@@ -57,7 +57,7 @@ registerBlockType( 'card-block/main', {
 			<div className="container">
 				<MediaUpload
 					onSelect={ media => {
-						setAttributes( { imageAlt: media.alt, imageUrl: media.url } ); 
+						setAttributes( { imageAlt: media.alt, imageUrl: media.url } );
 					} }
 					type="image"
 					value={ attributes.imageID }
