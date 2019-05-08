@@ -77,15 +77,15 @@ const Container = styled.div`
 //     object-fit: cover;
 //   }
 // `;
-// const style = {
-// 	border: '1px solid #cccccc',
-// 	padding: '1rem',
-// 	display: 'flex',
-// 	justifyContent: 'center',
-// 	alignItems: 'center',
-// 	flexDirection: 'column',
-// 	textAlign: 'center',
-// };
+const style = {
+	border: '1px solid #cccccc',
+	padding: '1rem',
+	display: 'flex',
+	justifyContent: 'center',
+	alignItems: 'center',
+	flexDirection: 'column',
+	textAlign: 'center',
+};
 
 registerBlockType( 'card-block/main', {
   title: 'Card',
@@ -192,7 +192,7 @@ registerBlockType( 'card-block/main', {
     return (
 			<div
 				className="card"
-				// style={ style }
+				style={ style }
 			>
         { cardImage(attributes.imageUrl, attributes.imageAlt) }
         <div className="card__content">
