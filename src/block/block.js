@@ -38,6 +38,36 @@ const Container = styled.div`
   }
 `;
 
+const Card = styled.div`
+	border: 1px solid #cccccc;
+	padding: 1rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	text-align: center;
+
+  .button-container {
+    text-align: center;
+    padding: 22% 0;
+    border: 1px solid #cccccc;
+    border-radius: 2px;
+    margin: 0 0 1.2rem 0;
+  }
+
+  .card__title {
+    font-size: 1.5rem;
+		font-weight: 600;
+		text-align: center;
+  }
+
+  .card__body {
+    height: 15.7rem;
+    width: 100%;
+    object-fit: cover;
+  }
+`;
+
 registerBlockType( 'card-block/main', {
   title: 'Card',
   icon: 'heart',
@@ -141,7 +171,7 @@ registerBlockType( 'card-block/main', {
     };
     
     return (
-      <div className="card">
+      <Card>
         { cardImage(attributes.imageUrl, attributes.imageAlt) }
         <div className="card__content">
           <h3 className="card__title">{ attributes.title }</h3>
@@ -149,7 +179,7 @@ registerBlockType( 'card-block/main', {
             { attributes.body }
           </div>
         </div>
-      </div>
+      </Card>
     );
   }
 });
